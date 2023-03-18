@@ -1,0 +1,3 @@
+# must have Microsoft Power Point
+glob2
+tqdm
