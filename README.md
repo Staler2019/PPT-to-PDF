@@ -1,17 +1,16 @@
 # PPT to PDF
 
+Convert `ppt`/`pptx` files to `pdf`. They will be put in the `PDF` folder which rooted to the directory of each file.
+
 ## Pre-require
 
-- Python 3
-  - glob
-  - tqdm
-  - win32com
+[`requirements.txt`](requirements.txt)
 
 ## Usage
 
 1. `python3 ppt2Pdf.py`
-2. key in your full destination of folder
+2. And input full path of the folder
 
 ## TODO
-1. change only one file
-2. select which file to change
+
+- [ ] make UI

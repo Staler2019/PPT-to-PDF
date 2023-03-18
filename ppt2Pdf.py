@@ -6,8 +6,8 @@ import glob
 import tqdm
 
 
-ppttoPDF = 32
-PDF_LOC = "PDF"
+typePPT2PDF = 32 # format type
+PDF_LOC = "PDF" # pdf saving folder: rooted to the dir of each file
 
 
 def getFolder():
@@ -32,7 +32,7 @@ def save2pdf(f):
         # Load presentation
         deck = powerpoint.Presentations.Open(f)
         # Convert PPTX to PDF
-        deck.SaveAs(saveFileName, ppttoPDF)
+        deck.SaveAs(saveFileName, typePPT2PDF)
         deck.Close()
 
         # delete file
@@ -47,8 +47,8 @@ if __name__ == "__main__":
 
     types = ("/**/*.ppt", "/**/*.pptx")
     files = []
-    for ftype in types:
-        files.extend(glob.glob(srcPath + ftype, recursive=True))
+    for fileType in types:
+        files.extend(glob.glob(srcPath + fileType, recursive=True))
 
     powerpoint = win32com.client.Dispatch("Powerpoint.Application")
 
